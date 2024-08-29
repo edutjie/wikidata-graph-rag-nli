@@ -9,6 +9,16 @@ os.environ["HUGGINGFACEHUB_API_TOKEN"] = HF_TOKEN
 
 st.title("🔎 Knowledge Graph Open NLI LLM-based System - Wikidata")
 
+with st.expander("See Question Examples"):
+    st.write(
+        """
+        - Mosque, with countries
+        - Hourses, limitted to 5
+        - Picture of a cat
+        - Number of humans
+        - Nationality of Shawn Mendes
+    """
+    )
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
@@ -34,6 +44,10 @@ if prompt := st.chat_input(placeholder="Ask me anything..."):
         question = [msg for msg in st.session_state.messages if msg["role"] == "user"][
             -1
         ]["content"]
-        response = search_agent.chat(question, verbose=1)
+        try:
+            response = search_agent.chat(question, verbose=1)
+        except Exception as e:
+            print(e)
+            response = f"Sorry, I couldn't find an answer to your question. Please try again with another question."
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.write(response)

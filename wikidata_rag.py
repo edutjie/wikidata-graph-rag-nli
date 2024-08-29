@@ -262,7 +262,7 @@ Wikidata Entities: ```json{{"New York City": [{{"id": "Q60",
 Entity IDs: ```json{{
         "ids": [
             {{"id": "Q60", "label": "New York City", "description": "most populous city in the United States"}},
-            {{"id": "Q5", "label": "human", "description": "any member of Homo sapiens, unique extant species of the genus Homo, from embryo to adult"}},
+            {{"id": "Q5", "label": "human", "description": "any member of Homo sapiens, unique extant species of the genus Homo, from embryo to adult"}}
         ]
     }}```
 
@@ -322,7 +322,7 @@ Wikidata Entities: ```json{{"WWII": [{{"id": "Q362",
 Entity IDs: ```json{{
         "ids": [
             {{"id": "Q362", "label": "World War II", "description": "1939–1945 global conflict"}},
-            {{"id": "Q178561", "label": "battle", "description": "part of a war which is well defined in duration, area and force commitment"}},
+            {{"id": "Q178561", "label": "battle", "description": "part of a war which is well defined in duration, area and force commitment"}}
         ]
     }}```
 

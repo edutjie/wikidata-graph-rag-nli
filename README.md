@@ -17,3 +17,5 @@ To run the app locally, please run:
 ```shell
 streamlit run main.py
 ```
+
+Deployed app: [here](https://wikidata-graph-rag-nli.streamlit.app/)
