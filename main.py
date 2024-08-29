@@ -1,10 +1,6 @@
 import streamlit as st
 import os
 
-from langchain.agents import initialize_agent, AgentType
-from langchain.callbacks import StreamlitCallbackHandler
-from langchain.chat_models import ChatOpenAI
-
 from wikidata_rag import WikidataGraphRAG
 
 DEVICE = "cpu"
@@ -35,9 +31,6 @@ if prompt := st.chat_input(placeholder="Ask me anything..."):
         hf_token=HF_TOKEN,
     )
     with st.chat_message("assistant"):
-        # response = search_agent.run(st.session_state.messages,
-        #                             # callbacks=[st_cb]
-        #                             )
         question = [msg for msg in st.session_state.messages if msg["role"] == "user"][
             -1
         ]["content"]

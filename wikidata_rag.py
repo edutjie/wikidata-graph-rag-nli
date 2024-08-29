@@ -1,10 +1,8 @@
-import streamlit as st
 import re, requests
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain import PromptTemplate, HuggingFaceHub, HuggingFacePipeline, LLMChain
-from langchain.callbacks import StreamlitCallbackHandler
 from langchain.output_parsers import (
     ResponseSchema,
     StructuredOutputParser,
