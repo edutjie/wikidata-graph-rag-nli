@@ -205,6 +205,30 @@ Entity: """
 {format_instructions}
 
 ## EXAMPLES
+- Question: Horses
+Entities: ["Horse"]
+Wikidata Entities: ```json{{"Horse": [{{"id": "Q726", 
+"label": "horse", 
+"description": "domesticated four-footed mammal from the equine family"}}, 
+{{"id": "Q60168", 
+"label": "heroin", 
+"description": "chemical compound; opioid most commonly used as a recreational drug for its euphoric effects"}}, 
+{{"id": "Q136", 
+"label": "knight", 
+"description": 
+"piece in the board game of chess"}}, 
+{{"id": "Q10758650", 
+"label": "Equus caballus", 
+"description": "species of mammal"}}, 
+{{"id": "Q840330", 
+"label": "pommel horse", 
+"description": "men's artistic gymnastics apparatus"}}]}}
+Entity IDs: ```json{{
+        "ids": [
+            {{"id": "Q726", "label": "horse", "description": "domesticated four-footed mammal from the equine family"}}
+        ]
+    }}```
+
 - Question: Humans born in New York City
 Entities: ["New York City", "Human"]
 Wikidata Entities: ```json{{"New York City": [{{"id": "Q60",
@@ -1266,6 +1290,7 @@ GROUP BY ?year
 - If you don't know the answer, just say that you don't know
 - Answer the question in a natural way like you are the one who know the context, DO NOT mention like "according to the context", etc.
 - Answer it using complete sentence!
+- If the question is about retrieving information that is limited to a certain amount, make sure to return all the results from the context that match the limited amount.
 
 ## CONTEXT
 ```json{{
