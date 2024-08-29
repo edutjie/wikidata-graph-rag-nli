@@ -2,7 +2,7 @@
 
 ![Pipeline](/images/pipeline.png "Pipeline")
 
-The proposed GraphRAG pipeline is illustrated in Fig. \ref{fig:pipeline}. The explanation of each step is as follows:
+The proposed GraphRAG pipeline is illustrated above. The explanation of each step is as follows:
 
 - Given the user's question, the LLM extracts relevant entities that exist within the question. For example, if the question is about `Mosques, with countries`, the LLM response would be `['Mosque', 'Country']`.
 - For every extracted entity, the keyword is used to retrieve the top-5 related Wikidata entities using the Wikidata API. The retrieved data includes the URI (ID), label, and description of the entity.
