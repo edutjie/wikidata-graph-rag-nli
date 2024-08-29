@@ -1243,7 +1243,6 @@ GROUP BY ?year
         return query
 
     def run(self, question: str, return_query: bool = False, verbose: int = 0):
-        print("tes")
         extracted_entities = self.extract_entity(question, model_name=self.model_name)
         if verbose == 1:
             print(extracted_entities)
