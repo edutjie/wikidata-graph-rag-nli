@@ -9,3 +9,11 @@ The proposed GraphRAG pipeline is illustrated above. The explanation of each ste
 - The LLM determines the most suitable entity from the list of entities retrieved before, based on the context of the user's question and the description of the entity.
 - The LLM generates the most appropriate SPARQL query to answer the user's question, given the determined entities and the predefined top-100 frequently used properties in Wikidata. The SPARQL query must contain the given properties and entities only, to reduce hallucination.
 - The generated SPARQL query will be executed against the Wikidata endpoint, and the result will be passed as the context for the LLM to generate a relevant response to answer the user's question.
+
+## Instructions
+
+To run the app locally, please run:
+
+```shell
+streamlit run main.py
+```
