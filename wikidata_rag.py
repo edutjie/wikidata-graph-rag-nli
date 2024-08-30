@@ -1320,5 +1320,5 @@ GROUP BY ?year
 
         return llm_chain.run(
             question=question,
-            wikidata_context=wikidata_context,
+            wikidata_context=wikidata_context[:100],
         ).split("## ANSWER\n")[-1]
