@@ -1,6 +1,6 @@
 # Towards an Open NLI LLM-based System for KGs: A Case Study of Wikidata
 
-![Pipeline](/images/pipeline.png "Pipeline")
+![Pipeline](/images/pipeline-latest.png "Pipeline")
 
 The proposed GraphRAG pipeline is illustrated above. The explanation of each step is as follows:
 
