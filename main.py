@@ -12,11 +12,11 @@ st.title("🔎 Knowledge Graph Open NLI LLM-based System - Wikidata")
 with st.expander("See Question Examples"):
     st.write(
         """
-        - Mosque, with countries
-        - Hourses, limitted to 5
+        - Horses limited to 5
+        - Mosque with countries limited to 5
+        - Nationality of Ed Sheeran
         - Picture of a cat
         - Number of humans
-        - Nationality of Shawn Mendes
     """
     )
 
@@ -36,7 +36,7 @@ if prompt := st.chat_input(placeholder="Ask me anything..."):
     st.chat_message("user").write(prompt)
 
     search_agent = WikidataGraphRAG(
-        model_name="mistralai/Mistral-7B-Instruct-v0.3",
+        model_name="mistralai/Mistral-Nemo-Instruct-2407",
         device=DEVICE,
         hf_token=HF_TOKEN,
     )
